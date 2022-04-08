@@ -15,10 +15,16 @@ releases:
   name: cert-manager
   values:
   - values.yaml
+  - ../../versionStream/charts/jetstack/cert-manager/values.yaml.gotmpl
+  - jx-values.yaml
 - chart: emberstack/reflector
   version: 4.1.12
   name: reflector
+  values:
+  - jx-values.yaml
 - chart: ../../charts/addons-cert-manager
   name: addons-cert-manager
+  values:
+  - jx-values.yaml
 templates: {}
 renderedvalues: {}

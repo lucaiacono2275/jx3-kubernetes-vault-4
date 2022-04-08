@@ -33,16 +33,20 @@ jxRequirements:
     registry: ghcr.io
   environments:
   - key: dev
+    owner: lucaiacono2275
+    repository: jx3-kubernetes-vault-4
   - key: staging
   - key: production
   ingress:
-    domain: change.me
+    domain: ihsws.it
     kind: ingress
     namespaceSubDomain: -jx.
     tls:
-      email: ""
-      enabled: false
+      email: luca.iacono@gmail.com
+      enabled: true
       production: false
+  pipelineUser:
+    username: lucaiacono2275
   repository: bucketrepo
   secretStorage: vault
   vault: {}
@@ -50,7 +54,7 @@ jxRequirements:
 jxRequirementsIngressExternalDNS:
   enabled: false
 jxRequirementsIngressTLS:
-  enabled: false
+  enabled: true
 jxRequirementsKuberhealthy:
   enabled: false
 jxRequirementsTLSCheck:

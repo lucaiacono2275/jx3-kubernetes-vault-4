@@ -1,0 +1,23 @@
+# Source: addons/templates/certificate-prod.yaml
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: tls-ihsws-it-p
+  namespace: cert-manager
+  annotations:
+    meta.helm.sh/release-name: 'addons-cert-manager'
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  secretName: tls-ihsws-it-p
+  issuerRef:
+    name: letsencrypt-dns01-prod
+    kind: ClusterIssuer
+  dnsNames:
+    - '*.ihsws.it'
+  secretTemplate:
+    annotations:
+      reflector.v1.k8s.emberstack.com/reflection-allowed: "true"
+      reflector.v1.k8s.emberstack.com/reflection-allowed-namespaces: "identity,jx,jx-staging,jx-production" # Control destination namespaces
+      reflector.v1.k8s.emberstack.com/reflection-auto-enabled: "true" # Auto create reflection for matching namespaces
+      reflector.v1.k8s.emberstack.com/reflection-auto-namespaces: "identity,jx,jx-staging,jx-production" # Control auto-reflection namespaces

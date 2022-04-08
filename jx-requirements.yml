@@ -17,16 +17,20 @@ spec:
     registry: ghcr.io
   environments:
   - key: dev
+    owner: lucaiacono2275
+    repository: jx3-kubernetes-vault-4
   - key: staging
   - key: production
   ingress:
     domain: ihsws.it
-    externalDNS: false
+    kind: ingress
     namespaceSubDomain: -jx.
     tls:
-      email: "luca.iacono@gmail.com"
+      email: luca.iacono@gmail.com
       enabled: true
       production: true
+  pipelineUser:
+    username: lucaiacono2275
   repository: bucketrepo
   secretStorage: vault
   vault: {}
