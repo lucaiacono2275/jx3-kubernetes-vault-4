@@ -1,0 +1,14 @@
+# Source: reflector/templates/rbac-serviceAccount.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: reflector
+  namespace: cert-manager
+  labels:
+    app.kubernetes.io/name: reflector
+    helm.sh/chart: reflector-4.1.12
+    app.kubernetes.io/instance: reflector
+    app.kubernetes.io/managed-by: Helm
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  annotations:
+    meta.helm.sh/release-name: 'reflector'
