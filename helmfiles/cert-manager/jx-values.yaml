@@ -44,7 +44,7 @@ jxRequirements:
     tls:
       email: luca.iacono@gmail.com
       enabled: true
-      production: false
+      production: true
   pipelineUser:
     username: lucaiacono2275
   repository: bucketrepo

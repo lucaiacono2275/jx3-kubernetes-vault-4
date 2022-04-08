@@ -51,7 +51,7 @@ spec:
             - --validating-webhook=:8443
             - --validating-webhook-certificate=/usr/local/certificates/cert
             - --validating-webhook-key=/usr/local/certificates/key
-            - --default-ssl-certificate=jx/tls-ihsws-it-s
+            - --default-ssl-certificate=jx/tls-ihsws-it-p
             - --publish-service=nginx/ingress-nginx-controller
           securityContext:
             capabilities:
