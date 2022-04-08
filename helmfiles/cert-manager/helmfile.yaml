@@ -1,0 +1,24 @@
+filepath: ""
+environments:
+  default:
+    values:
+    - jx-values.yaml
+namespace: cert-manager
+repositories:
+- name: jetstack
+  url: https://charts.jetstack.io
+- name: emberstack
+  url: https://emberstack.github.io/helm-charts
+releases:
+- chart: jetstack/cert-manager
+  version: 1.8.0
+  name: cert-manager
+  values:
+  - values.yaml
+- chart: emberstack/reflector
+  version: 4.1.12
+  name: reflector
+- chart: ../../charts/addons-cert-manager
+  name: addons-cert-manager
+templates: {}
+renderedvalues: {}

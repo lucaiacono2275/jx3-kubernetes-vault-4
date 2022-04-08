@@ -20,12 +20,12 @@ spec:
   - key: staging
   - key: production
   ingress:
-    domain: ""
+    domain: ihsws.it
     externalDNS: false
     namespaceSubDomain: -jx.
     tls:
-      email: ""
-      enabled: false
+      email: "luca.iacono@gmail.com"
+      enabled: true
       production: false
   repository: bucketrepo
   secretStorage: vault
