@@ -26,7 +26,7 @@ spec:
     tls:
       email: "luca.iacono@gmail.com"
       enabled: true
-      production: false
+      production: true
   repository: bucketrepo
   secretStorage: vault
   vault: {}
