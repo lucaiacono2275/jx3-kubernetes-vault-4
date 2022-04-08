@@ -4,7 +4,7 @@ repositories:
 - name: banzaicloud-stable
   url: https://kubernetes-charts.banzaicloud.com
 - name: jx3
-  url: https://storage.googleapis.com/jenkinsxio/charts
+  url: https://jenkins-x-charts.github.io/repo
 releases:
 - chart: banzaicloud-stable/vault-operator
   name: vault-operator
@@ -13,7 +13,7 @@ releases:
   skipDeps: null
 - chart: jx3/vault-instance
   name: vault-instance
-  version: 1.0.15
+  version: 1.0.25
   forceNamespace: ""
   skipDeps: null
 templates: {}
